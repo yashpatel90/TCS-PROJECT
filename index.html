@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Project with Joystick</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- A-Frame and AR.js libraries -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.3.2/aframe/build/aframe-ar.min.js"></script>
+    <!-- Joystick library -->
+    <script src="/static/joystick.min.js"></script>
+</head>
+<body>
+    <!-- A-Frame Scene with AR.js Integration -->
+    <a-scene embedded arjs>
+        <!-- Hiro marker preset for easy testing -->
+        <a-marker preset="hiro">
+            <!-- 3D Model Entity (Astronaut) -->
+            <a-entity id="astronaut" gltf-model="/static/models/astronaut.glb"
+                      scale="0.5 0.5 0.5"
+                      rotation="0 180 0"
+                      position="0 0 0"></a-entity>
+        </a-marker>
+        <!-- Camera Entity for AR Tracking -->
+        <a-entity camera></a-entity>
+    </a-scene>
+    <!-- Virtual Joystick Container -->
+    <div id="joystickContainer"></div>
+    <!-- JavaScript for rotation, zoom, and joystick control -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
