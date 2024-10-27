@@ -9,3 +9,13 @@ a-scene {
     width: 100vw;
     height: 100vh;
 }
+
+/* Joystick styling */
+#joystickContainer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+}
